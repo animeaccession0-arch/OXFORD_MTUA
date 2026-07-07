@@ -1,7 +1,8 @@
 import streamlit as st
 import google.generativeai as genai
 import time
-
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+genai.configure(api_key=GOOGLE_API_KEY)
 st.set_page_config(page_title="MTUA AI Exam Hall by Anime", page_icon="📜", layout="wide")
 st.markdown("<h1 style='text-align: center; color: #003366;'>📜 MTUA AI EXAM HALL</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: grey;'>Built by Anime | AI Questions + Past Papers + Certificate</h3>", unsafe_allow_html=True)
